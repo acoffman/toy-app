@@ -1,0 +1,7 @@
+<h1>Top ten visitors to our site</h1>
+
+<ul>
+  <% @top_users.each do |user| %>
+    <li><%= user.name %>(<%= user.visit_count %>)</li>
+  <% end %>
+</ul>

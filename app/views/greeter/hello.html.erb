@@ -1,3 +1,7 @@
-<h1>Hello, <%= @name -%>!</h1>
+<h1>Hello, <%= @user.name -%>!</h1>
+<% if @user.visit_count == 1 %>
+  <p>This is your first visit!</p>
+<% else %>
+  <p>You've been here <%= @user.visit_count %> times before!</p>
+<% end %>
 
-<%= @params.to_json %>
